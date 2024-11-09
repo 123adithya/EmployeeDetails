@@ -1,0 +1,212 @@
+{
+    "employees": [
+        {
+          "name": "Andrew Bridgen",
+          "role": "Sr. UI Developer",
+          "image": "assets/data/avatars/avatar-4.jpg",
+          "rating": 3.50,
+          "experience": "5.8 Years",
+          "joiningDate": "2017",
+          "team": "OCBC Singapore",
+          "manager": "Lalit Agarwal",
+          "phone": "7406559241",
+          "email": "andrew@infrd.ai",
+"designation": "Software Developer"
+        },
+        {
+          "name": "Samantha Ray",
+          "role": "Frontend Developer",
+          "image": "assets/data/avatars/avatar-2.jpg",
+          "rating": 4.25,
+          "experience": "3.2 Years",
+          "joiningDate": "2020",
+          "team": "DBS Bank",
+          "manager": "Rajesh Kumar",
+          "phone": "9898989898",
+          "email": "samantha@infrd.ai"
+        ,
+"designation": "Senior Software Developer"
+        },
+        {
+          "name": "John Doe",
+          "role": "Lead UI Developer",
+          "image": "assets/data/avatars/avatar-3.jpg",
+          "rating": 4.80,
+          "experience": "7.5 Years",
+          "joiningDate": "2015",
+          "team": "RBC Capital Markets",
+          "manager": "Maria Patel",
+          "phone": "8777554433",
+          "email": "john@infrd.ai"
+        ,
+"designation": "Software Developer"
+        },
+        {
+          "name": "Priya Mehta",
+          "role": "UI Developer",
+          "image": "assets/data/avatars/avatar-4.jpg",
+          "rating": 4.00,
+          "experience": "4.0 Years",
+          "joiningDate": "2019",
+          "team": "HDFC Bank",
+          "manager": "Sunil Verma",
+          "phone": "9000112233",
+          "email": "priya@infrd.ai"
+        ,
+"designation": "Senior Software Developer"
+        },
+        {
+          "name": "Michael Smith",
+          "role": "Senior Frontend Developer",
+          "image": "assets/data/avatars/avatar-5.jpg",
+          "rating": 3.80,
+          "experience": "6.0 Years",
+          "joiningDate": "2016",
+          "team": "JPMorgan Chase",
+          "manager": "Maya Desai",
+          "phone": "7555223344",
+          "email": "michael@infrd.ai"
+        ,
+"designation": "Software Developer"
+        },
+        {
+          "name": "Sarah Williams",
+          "role": "UI/UX Designer",
+          "image": "assets/data/avatars/avatar-5.jpg",
+          "rating": 4.60,
+          "experience": "5.0 Years",
+          "joiningDate": "2018",
+          "team": "Barclays",
+          "manager": "Anil Kapoor",
+          "phone": "6333445566",
+          "email": "sarah@infrd.ai"
+        ,
+"designation": "Senior Software Developer"
+        },
+        {
+          "name": "Daniel Thomas",
+          "role": "Web Developer",
+          "image": "assets/data/avatars/avatar-4.jpg",
+          "rating": 3.90,
+          "experience": "4.5 Years",
+          "joiningDate": "2019",
+          "team": "Citibank",
+          "manager": "Ravi Singh",
+          "phone": "7677889900",
+          "email": "daniel@infrd.ai"
+        ,
+"designation": "Technical Lead Manager"
+        },
+        {
+          "name": "Emma Johnson",
+          "role": "Frontend Engineer",
+          "image": "assets/data/avatars/avatar-3.jpg",
+          "rating": 4.10,
+          "experience": "3.8 Years",
+          "joiningDate": "2020",
+          "team": "Standard Chartered",
+          "manager": "Nisha Sharma",
+          "phone": "8088899001",
+          "email": "emma@infrd.ai"
+        ,
+"designation": "Quality Assurance"
+        },
+        {
+          "name": "James Robinson",
+          "role": "UI Developer",
+          "image": "assets/data/avatars/avatar-1.jpg",
+          "rating": 4.30,
+          "experience": "4.0 Years",
+          "joiningDate": "2018",
+          "team": "UBS",
+          "manager": "Amit Chandra",
+          "phone": "7799001122",
+          "email": "james@infrd.ai"
+        ,
+"designation": "Technical Lead Manager"
+        },
+        {
+          "name": "Sophia Patel",
+          "role": "Sr. UI Developer",
+          "image": "assets/data/avatars/avatar-5.jpg",
+          "rating": 4.50,
+          "experience": "6.2 Years",
+          "joiningDate": "2017",
+          "team": "Goldman Sachs",
+          "manager": "Rohan Jain",
+          "phone": "7988223344",
+          "email": "sophia@infrd.ai"
+        ,
+"designation": "Quality Assurance"
+        },
+        {
+          "name": "David Lee",
+          "role": "Frontend Developer",
+          "image": "assets/data/avatars/avatar-1.jpg",
+          "rating": 4.15,
+          "experience": "4.3 Years",
+          "joiningDate": "2018",
+          "team": "Morgan Stanley",
+          "manager": "Ravi Prakash",
+          "phone": "7888992233",
+          "email": "david@infrd.ai"
+        ,
+"designation": "Senior Software Developer"
+        },
+        {
+          "name": "Laura Moore",
+          "role": "UI Designer",
+          "image": "assets/data/avatars/avatar-2.jpg",
+          "rating": 3.95,
+          "experience": "3.7 Years",
+          "joiningDate": "2020",
+          "team": "HSBC",
+          "manager": "Vikram Singh",
+          "phone": "7999001122",
+          "email": "laura@infrd.ai"
+        ,
+"designation": "Quality Assurance"
+        },
+        {
+          "name": "William Harris",
+          "role": "Senior Web Developer",
+          "image": "assets/data/avatars/avatar-3.jpg",
+          "rating": 4.60,
+          "experience": "8.0 Years",
+          "joiningDate": "2014",
+          "team": "Citi Private Bank",
+          "manager": "Geeta Patel",
+          "phone": "8444556677",
+          "email": "william@infrd.ai"
+        ,
+"designation": "Quality Assurance"
+        },
+        {
+          "name": "Olivia Clark",
+          "role": "UI/UX Developer",
+          "image": "assets/data/avatars/avatar-4.jpg",
+          "rating": 4.35,
+          "experience": "4.8 Years",
+          "joiningDate": "2019",
+          "team": "Bank of America",
+          "manager": "Karan Malhotra",
+          "phone": "7000442233",
+          "email": "olivia@infrd.ai"
+        ,
+"designation": "Quality Assurance"
+        },
+        {
+          "name": "Lucas Scott",
+          "role": "Frontend Engineer",
+          "image": "assets/data/avatars/avatar-1.jpg",
+          "rating": 3.75,
+          "experience": "5.2 Years",
+          "joiningDate": "2017",
+          "team": "Deutsche Bank",
+          "manager": "Sneha Sharma",
+          "phone": "8899776655",
+          "email": "lucas@infrd.ai",
+          "designation": "Technical Lead Manager"
+        }
+      ]
+  }
