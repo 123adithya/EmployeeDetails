@@ -1,0 +1,9 @@
+<input
+      #input
+      type="text"
+      class="form-control"
+      placeholder="Search..."
+      (input)="onSearch(input.value)"
+    />
+<app-display-employees [employees]="searchedEmployees"></app-display-employees>
+<div *ngIf="searchedEmployees.length === 0"> No Results Found</div>

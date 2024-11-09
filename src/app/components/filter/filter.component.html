@@ -1,0 +1,30 @@
+<div class="container">
+  <h4>click on submit only it will show results and both name and email matches</h4>
+  <div>
+  <form (submit)="onSubmit()">
+    <div class="row">
+      <div class="col-3">
+        <app-input 
+        [uInputControl]="nameControl('name')" 
+        [uType]="'text'" 
+        [uLabel]="'Name'" 
+        [uValidations]="validations.name">
+      </app-input>
+      </div>
+      <div class="col-3">
+        <app-input 
+          [uInputControl]="nameControl('email')" 
+          [uType]="'email'" 
+          [uLabel]="'Email ID'"
+          [uValidations]="validations.email">
+        </app-input>
+      </div>
+      <div class="col-3">
+        <button type="submit"  class="btn btn-primary mt-3">Submit</button>
+        <button [disabled]="isDisabled" (click)="clearFilter()" class="btn btn-secondary mt-3 ml-3">Clear</button>
+      </div>
+    </div>
+  </form>
+</div>
+<app-display-employees [employees]="filteredEmployees"></app-display-employees>
+</div>

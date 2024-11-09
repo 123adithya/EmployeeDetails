@@ -1,0 +1,10 @@
+<div class="form-group"></div>
+<label [for]="uLabel">Employee {{uLabel}}</label>
+<input class="form-control" [id]="uLabel" [formControl]="uInputControl!" [type]="uType" (input)="onSearch(uInputControl.value)"/>
+<div *ngIf="uInputControl.touched && uInputControl.invalid">
+<p *ngFor="let validation of uValidations">
+    <span *ngIf="uInputControl!.hasError(validation.type)">
+      {{validation.message}}
+    </span>
+</p>
+</div>

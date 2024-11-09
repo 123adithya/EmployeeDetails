@@ -1,0 +1,23 @@
+ <div class="card h-100" style="width: 18rem;">
+    <div class="d-flex justify-content-center align-items-center"><img [src]="uEmployee.image!" alt="Profile" class="profile-img" /></div>
+    <div class="rating">
+      <span *ngFor="let star of [1, 2, 3, 4, 5]" [class.filled]="star <= uEmployee.rating!">★</span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ uEmployee.name }}</h5>
+      <p class="card-text">{{ uEmployee.role }}</p>
+      <ul class="no-bullets">
+        <li><strong>Experience:</strong> {{ uEmployee.experience }}</li>
+        <li><strong>Date of Joining:</strong> {{ uEmployee.joiningDate }}</li>
+        <li><strong>Current Team:</strong> {{ uEmployee.team }}</li>
+        <li><strong>Reporting Manager:</strong> {{ uEmployee.manager }}</li>
+      </ul>
+      <div class="contact-info pt-1">
+        <a href="tel:{{ uEmployee.phone }}"><i class="fa fa-phone"></i> {{ uEmployee.phone }}</a>
+        <a href="mailto:{{ uEmployee.email }}"><i class="fa fa-envelope"></i> {{ uEmployee.email }}</a>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      <button class="btn btn-primary"(click)="editEmployeeDetails()">Update Details</button>
+    </div>
+  </div>

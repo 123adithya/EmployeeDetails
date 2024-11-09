@@ -1,0 +1,60 @@
+
+<div *ngIf="employee.email">
+    <h4>Only Phone needs to updated not added remaing</h4>
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        [(ngModel)]="employee.name"
+        required
+        readonly
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input
+        type="text"
+        id="role"
+        class="form-control"
+        name="role"
+        [(ngModel)]="employee.role"
+        required
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="employee.email"
+        required
+        email
+        readonly
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        class="form-control"
+        name="phone"
+        [(ngModel)]="employee.phone"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">
+      Update
+    </button>
+  </form>
+</div>
+<h2 *ngIf="!employee.email">No details to Show</h2>

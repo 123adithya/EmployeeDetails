@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { LoadEmployeesService } from './services/load-employees.service';
+import { EmployeeService } from './services/employee.service';
+import { EmployeeDataStorage } from './services/LocalStorageKeys';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Infrrd-Demo';
+  constructor(private uLoadEmployeeService: LoadEmployeesService, private uEmployeeService: EmployeeService){
+    this.uLoadEmployeeService.getData().subscribe((data:any) =>  this.uEmployeeService.setItem(EmployeeDataStorage.setEmployees, data.employees));
+  }
 }

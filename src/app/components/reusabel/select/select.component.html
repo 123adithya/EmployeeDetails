@@ -1,0 +1,5 @@
+<div class="form-group"></div>
+<label [for]="uLabel">{{uLabel}}:</label>
+      <select class="form-control" [id]="uLabel" [formControl]="uSelectControl">
+        <option *ngFor="let option of designation"  [value]="option" >-- {{option}} --</option>
+</select>
