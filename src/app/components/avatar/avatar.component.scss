@@ -1,0 +1,23 @@
+avatar-selection {
+    text-align: center;
+  
+    .avatar-images {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .avatar-image {
+      width: 10px;
+      height: 100px;
+      object-fit: cover !important;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }

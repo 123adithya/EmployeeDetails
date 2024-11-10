@@ -18,13 +18,14 @@ import { DisplayEmployeesComponent } from './components/display-employees/displa
 import { SearchEmployeeComponent } from './components/search-employee/search-employee.component';
 import { EditEmployeeDetailsComponent } from './components/edit-employee-details/edit-employee-details.component';
 import { ModalComponent } from './components/reusabel/modal/modal.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 export function preloadData(dataService: LoadEmployeesService): () => Promise<any> {
   return () => dataService.loadData();
 }
 
 @NgModule({
-  declarations: [AppComponent, AddEmployeeComponent, InfoCardComponent, FilterComponent, SidebarComponent, InputComponent, SelectComponent, DisplayEmployeesComponent, SearchEmployeeComponent, EditEmployeeDetailsComponent],
+  declarations: [AppComponent, AddEmployeeComponent, AvatarComponent, InfoCardComponent, FilterComponent, SidebarComponent, InputComponent, SelectComponent, DisplayEmployeesComponent, SearchEmployeeComponent, EditEmployeeDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),

@@ -14,6 +14,7 @@ export class AddEmployeeComponent {
   form: FormGroup;
   employee: Employee = { name : '', email: '', phone: '', role: ''};
   employees!: Employee[];
+  selectedAvatar: string | null = null;
 
   constructor(private fb: FormBuilder, private employeeService: EmployeeService) {
     this.form = this.fb.group({
@@ -21,7 +22,8 @@ export class AddEmployeeComponent {
       email: new FormControl<string | null>(''),
       companyName: new FormControl<string | null>(''),
       contactNo: new FormControl<string | null>(''),
-      designation: new FormControl<string>('')
+      designation: new FormControl<string>(''),
+      avatar: new FormControl(null)
     });
   }
 
@@ -41,6 +43,7 @@ export class AddEmployeeComponent {
       this.employee.name = newEmployee!.name;
       this.employee.phone =  newEmployee!.contactNo;
       this.employee.role =  newEmployee!.designation;
+      this.employee.image = newEmployee!.avatar;
       let employees = this.getEmployees();
       employees.push(this.employee);
       this.employeeService.setEmployeeDetails(EmployeeDataStorage.setEmployees, employees);
@@ -50,5 +53,10 @@ export class AddEmployeeComponent {
       this.form.markAllAsTouched();
       console.log('Form is invalid');
     }
+  }
+
+  onAvatarSelected(avatar: string): void {
+    this.selectedAvatar = avatar;
+    this.form.controls['avatar'].setValue(avatar);
   }
 }
