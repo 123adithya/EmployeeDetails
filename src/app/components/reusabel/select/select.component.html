@@ -3,3 +3,9 @@
       <select class="form-control" [id]="uLabel" [formControl]="uSelectControl">
         <option *ngFor="let option of designation"  [value]="option" >-- {{option}} --</option>
 </select>
+<div *ngIf="uSelectControl.touched && uSelectControl.invalid">
+<p *ngFor="let validation of uValidations">
+  <span *ngIf="uSelectControl!.hasError(validation.type)">
+    {{validation.message}}
+  </span>
+</p></div>

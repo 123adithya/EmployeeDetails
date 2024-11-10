@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../components/employee-details/employee';
-import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { EmployeeDataStorage } from './LocalStorageKeys';
 
 @Injectable({

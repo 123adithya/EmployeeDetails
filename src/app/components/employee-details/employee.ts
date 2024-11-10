@@ -34,7 +34,7 @@ export interface Employee {
       { type: 'regex', value: /^[0-9]{10}$/, message: 'Contact Number must be 10 digits' },
     ],
     designation: [
-      { type: 'required', value: /^[A-Za-z\s]+$/, message: 'Company Name is required' },
+      { type: 'required', value: /^[A-Za-z\s]+$/, message: 'Designation is required' },
     ],
   };
 

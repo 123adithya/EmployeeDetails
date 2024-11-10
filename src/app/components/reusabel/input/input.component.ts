@@ -17,6 +17,7 @@ export class InputComponent implements OnInit{
 
   ngOnInit(): void {
     this.uInputControl!.setValidators(this.getValidators(this.uValidations));
+    this.uInputControl.updateValueAndValidity();
   }
 
   getValidators(validations: any[]): ValidatorFn[] {

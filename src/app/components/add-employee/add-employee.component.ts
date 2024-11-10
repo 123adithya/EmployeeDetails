@@ -21,7 +21,7 @@ export class AddEmployeeComponent {
       email: new FormControl<string | null>(''),
       companyName: new FormControl<string | null>(''),
       contactNo: new FormControl<string | null>(''),
-      designation: new FormControl('')
+      designation: new FormControl<string>('')
     });
   }
 
