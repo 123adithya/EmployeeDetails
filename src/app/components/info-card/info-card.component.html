@@ -18,6 +18,15 @@
       </div>
     </div>
     <div class="card-footer text-muted">
-      <button class="btn btn-primary"(click)="editEmployeeDetails()">Update Details</button>
+      <button class="btn btn-primary mr-1"(click)="editEmployeeDetails()">Update</button>
+      <button class="btn btn-danger pl-2"(click)="deleteEmployee()">Delete</button>
     </div>
   </div>
+
+  <app-modal
+  #confirmationModal
+  [title]="'Delete Confirmation'"
+  [message]="'Are you sure you want to delete this item?'"
+  (ok)="handleOk()"
+  (cancel)="handleCancel()">
+</app-modal>

@@ -24,7 +24,7 @@ export class FilterComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.filteredEmployees = this.employees =this.uEmployeeService.getItem(EmployeeDataStorage.setEmployees);
+    this.uEmployeeService.getEmployeeDetails(EmployeeDataStorage.setEmployees)!.subscribe(data => this.filteredEmployees = this.employees = data? data : []);
   }
 
   nameControl(control: string): FormControl {

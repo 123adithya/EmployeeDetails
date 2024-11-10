@@ -1,27 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../components/employee-details/employee';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { EmployeeDataStorage } from './LocalStorageKeys';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  employeeDatatoUpdate: BehaviorSubject<Employee> = new BehaviorSubject<Employee>({email:'', name: '',phone: '', role: ''})
+  employeeDatatoUpdate: BehaviorSubject<Employee> = new BehaviorSubject<Employee>({email:'', name: '',phone: '', role: ''});
+  private employeesSubject: BehaviorSubject<Employee[]> = new BehaviorSubject<Employee[]>([]);
 
   constructor(){}
 
-  setItem(key: string, value: Employee[]): void {
+  setEmployeeDetails(key: string, value: Employee[]): void {
     localStorage.setItem(key, JSON.stringify(value));
+    this.employeesSubject.next(value);
   }
 
-  getItem(key: string): any {
-    const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : null;
+  getEmployeeDetails(key: string): Observable<Employee[]> {
+    return this.employeesSubject.asObservable();
   }
 
-  removeItem(key: string): void {
-    localStorage.removeItem(key);
+  removeEmployee(employee: Employee): void {
+    const localKey = EmployeeDataStorage.setEmployees;
+    const currentEmployees = this.employeesSubject.value;
+    const updatedEmployees = currentEmployees.filter(emp => emp.email !== employee.email);
+    this.setEmployeeDetails(localKey,updatedEmployees);
   }
 
   clear(): void {

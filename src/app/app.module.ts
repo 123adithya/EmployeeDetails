@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,8 +17,11 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
 import { DisplayEmployeesComponent } from './components/display-employees/display-employees.component';
 import { SearchEmployeeComponent } from './components/search-employee/search-employee.component';
 import { EditEmployeeDetailsComponent } from './components/edit-employee-details/edit-employee-details.component';
+import { ModalComponent } from './components/reusabel/modal/modal.component';
 
-
+export function preloadData(dataService: LoadEmployeesService): () => Promise<any> {
+  return () => dataService.loadData();
+}
 
 @NgModule({
   declarations: [AppComponent, AddEmployeeComponent, InfoCardComponent, FilterComponent, SidebarComponent, InputComponent, SelectComponent, DisplayEmployeesComponent, SearchEmployeeComponent, EditEmployeeDetailsComponent],
@@ -28,9 +31,15 @@ import { EditEmployeeDetailsComponent } from './components/edit-employee-details
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalComponent
   ],
-  providers: [EmployeeService,LoadEmployeesService],
+  providers: [{
+    provide: APP_INITIALIZER,
+    useFactory: preloadData,
+    deps: [LoadEmployeesService],
+    multi: true
+  },EmployeeService,LoadEmployeesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

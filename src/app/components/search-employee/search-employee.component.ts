@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { EmployeeService } from '../../services/employee.service';
 import { Employee } from '../employee-details/employee';
 import { EmployeeDataStorage } from '../../services/LocalStorageKeys';
@@ -7,7 +7,8 @@ import { BehaviorSubject, debounceTime, distinctUntilChanged, map } from 'rxjs';
 @Component({
   selector: 'app-search-employee',
   templateUrl: './search-employee.component.html',
-  styleUrl: './search-employee.component.scss'
+  styleUrl: './search-employee.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchEmployeeComponent {
   employees!: Employee[];
@@ -17,7 +18,7 @@ export class SearchEmployeeComponent {
   constructor( private uEmployeeService: EmployeeService) {}
 
   ngOnInit(): void {
-    this.searchedEmployees = this.employees =this.uEmployeeService.getItem(EmployeeDataStorage.setEmployees);
+    this.uEmployeeService.getEmployeeDetails(EmployeeDataStorage.setEmployees).subscribe((data) => { this.searchedEmployees = this.employees = [...data]});
     this.searchSubject
       .pipe(
         debounceTime(300),

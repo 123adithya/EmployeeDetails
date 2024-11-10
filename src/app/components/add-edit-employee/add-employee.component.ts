@@ -13,7 +13,7 @@ export class AddEmployeeComponent {
   validations = ValidationRules;
   form: FormGroup;
   employee: Employee = { name : '', email: '', phone: '', role: ''};
-  employees!: Employee[];
+  employees!:Employee[];
 
   constructor(private fb: FormBuilder, private employeeService: EmployeeService) {
     this.form = this.fb.group({
